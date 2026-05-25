@@ -8,6 +8,7 @@ import json
 import time
 import requests
 import os
+import sys
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -50,7 +51,7 @@ def main():
 
          print(response.read().decode())
          print("ORDER PLACED. EXITING LOOP.")
-         break
+         sys.exit(0) # exit safely with Railway Deployment to avoid a duplicate order
 
       else:
          print("Condition not met. Waiting...")
