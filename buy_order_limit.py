@@ -16,7 +16,7 @@ load_dotenv()
 def main():
 
    trigger_price = float(os.getenv("TRIGGER_PRICE"))
-   amount_invested = 1.00  
+   amount_invested = float(os.getenv("AMOUNT_INVESTED", 1.00))
    MIN_BTC = 0.0001
    check_count = 0
    
